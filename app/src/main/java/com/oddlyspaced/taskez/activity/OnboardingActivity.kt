@@ -3,10 +3,11 @@ package com.oddlyspaced.taskez.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.oddlyspaced.taskez.R
+import com.oddlyspaced.taskez.base.TaskEzActivity
 import com.oddlyspaced.taskez.databinding.ActivityOnboardingBinding
 import com.oddlyspaced.taskez.fragment.OnboardingFragment1
 
-class OnboardingActivity : AppCompatActivity() {
+class OnboardingActivity : TaskEzActivity() {
 
     private lateinit var binding: ActivityOnboardingBinding
 
