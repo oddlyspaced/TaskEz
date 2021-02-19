@@ -1,9 +1,10 @@
-package com.oddlyspaced.taskez
+package com.oddlyspaced.taskez.base
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.oddlyspaced.taskez.R
 
 // An extended ConstraintLayout that has it's background set as layout_activity_background by default
 class TaskEzLayout: ConstraintLayout {

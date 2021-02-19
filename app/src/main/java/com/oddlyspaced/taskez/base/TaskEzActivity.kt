@@ -1,4 +1,4 @@
-package com.oddlyspaced.taskez
+package com.oddlyspaced.taskez.base
 
 import android.graphics.Color
 import android.os.Bundle
