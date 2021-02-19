@@ -188,7 +188,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/circle"
-        android:backgroundTint="@color/background_2"
+        android:backgroundTint="@color/state_deactivated"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintStart_toEndOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -200,8 +200,35 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/circle"
-        android:backgroundTint="@color/background_2"
+        android:backgroundTint="@color/state_deactivated"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintStart_toEndOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:srcCompat="@drawable/polygon"
+        app:tint="@color/background_2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="By continuing you agree Taskez’s Terms of Services &amp; Privacy Policy "
+        android:textAlignment="center"
+        android:textColor="@color/state_deactivated"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 </com.oddlyspaced.taskez.base.TaskEzLayout>
