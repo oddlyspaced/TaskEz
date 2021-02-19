@@ -5,4 +5,12 @@
     <color name="primary">#246BFD</color>
     <color name="secondart">#C25FFF</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="colorful_1">#A06AF9</color>
+    <color name="colorful_2">#FBA3FF</color>
+    <color name="colorful_3">#8E96FF</color>
+    <color name="colorful_4">#94F0F0</color>
+    <color name="colorful_5">#A5F59C</color>
+    <color name="colorful_6">#FFDD72</color>
+    <color name="colorful_7">#FF968E</color>
 </resources>
