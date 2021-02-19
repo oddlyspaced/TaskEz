@@ -3,6 +3,7 @@ package com.oddlyspaced.taskez
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.oddlyspaced.taskez.activity.OnboardingActivity
 import com.oddlyspaced.taskez.activity.SplashActivity
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
-        startActivity(Intent(applicationContext, SplashActivity::class.java))
+        startActivity(Intent(applicationContext, OnboardingActivity::class.java))
     }
 }
