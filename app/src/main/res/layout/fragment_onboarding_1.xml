@@ -171,4 +171,14 @@
         app:srcCompat="@drawable/circle"
         app:tint="@color/colorful_2" />
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:translationX="-36dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/polygon"
+        app:tint="@color/background_2" />
+
 </com.oddlyspaced.taskez.base.TaskEzLayout>
