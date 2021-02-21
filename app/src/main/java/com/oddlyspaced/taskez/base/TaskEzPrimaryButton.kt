@@ -39,7 +39,7 @@ class TaskEzPrimaryButton: CardView {
     private fun setAttr(attributes: AttributeSet) {
         val typedArray = context.obtainStyledAttributes(attributes, R.styleable.TaskEzPrimaryButton, 0, 0)
         try {
-            binding.imgPrimaryButtonDrawable.isVisible = typedArray.getBoolean(R.styleable.TaskEzPrimaryButton_disableIcon, false)
+            binding.imgPrimaryButtonDrawable.isVisible = typedArray.getBoolean(R.styleable.TaskEzPrimaryButton_iconVisible, false)
             binding.txPrimaryButtonText.text = typedArray.getString(R.styleable.TaskEzPrimaryButton_text)
             binding.imgPrimaryButtonDrawable.setImageResource(typedArray.getResourceId(R.styleable.TaskEzPrimaryButton_iconSrc, R.drawable.ic_mail))
         }
