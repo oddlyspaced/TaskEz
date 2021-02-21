@@ -64,6 +64,18 @@
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:translationX="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:srcCompat="@drawable/polygon"
+        app:tint="@color/background_2" />
+
     <com.oddlyspaced.taskez.base.TaskEzPrimaryButton
         android:layout_width="0dp"
         android:layout_height="wrap_content"
