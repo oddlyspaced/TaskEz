@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.isVisible
 import com.oddlyspaced.taskez.R
 import com.oddlyspaced.taskez.databinding.ButtonPrimaryBinding
+import com.oddlyspaced.taskez.utils.DimensionUtils
 
 class TaskEzPrimaryButton: CardView {
 
@@ -32,8 +33,8 @@ class TaskEzPrimaryButton: CardView {
         binding = ButtonPrimaryBinding.bind(this)
         // TODO : Check why double setting is necessary
         binding.cvPrimaryButton.setCardBackgroundColor(context.getColor(R.color.primary))
-        binding.cvPrimaryButton.elevation = floatToDp(8F)
-        binding.cvPrimaryButton.radius = floatToDp(24F)
+        binding.cvPrimaryButton.elevation = DimensionUtils.floatToDp(context, 8F)
+        binding.cvPrimaryButton.radius = DimensionUtils.floatToDp(context, 24F)
     }
 
     private fun setAttr(attributes: AttributeSet) {
@@ -50,7 +51,5 @@ class TaskEzPrimaryButton: CardView {
             typedArray.recycle()
         }
     }
-
-    private fun floatToDp(dp: Float) = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.resources.displayMetrics)
 
 }
