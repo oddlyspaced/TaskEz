@@ -13,7 +13,7 @@ class ColorThemeAdapter(private val list: ArrayList<ColorThemeItem>): RecyclerVi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.button_back, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_color_theme, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
