@@ -31,16 +31,12 @@ class CreateWorkspaceFragment: Fragment() {
         binding = FragmentCreateWorkspaceBinding.bind(view)
 
         val list = arrayListOf(
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
-            ColorThemeItem(0),
+            ColorThemeItem(R.drawable.gradient_2),
+            ColorThemeItem(R.drawable.gradient_3),
+            ColorThemeItem(R.drawable.gradient_4),
+            ColorThemeItem(R.drawable.gradient_7),
+            ColorThemeItem(R.drawable.gradient_8),
+            ColorThemeItem(R.drawable.gradient_9, true),
         )
 
         val adapter = ColorThemeAdapter(list)
