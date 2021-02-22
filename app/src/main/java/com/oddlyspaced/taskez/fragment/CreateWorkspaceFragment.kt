@@ -5,7 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.oddlyspaced.taskez.R
+import com.oddlyspaced.taskez.adapter.ColorThemeAdapter
+import com.oddlyspaced.taskez.databinding.FragmentCreateWorkspaceBinding
+import com.oddlyspaced.taskez.modal.ColorThemeItem
 
 class CreateWorkspaceFragment: Fragment() {
 
@@ -16,8 +20,32 @@ class CreateWorkspaceFragment: Fragment() {
         }
     }
 
+    private lateinit var binding: FragmentCreateWorkspaceBinding
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_create_workspace, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentCreateWorkspaceBinding.bind(view)
+
+        val list = arrayListOf(
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+            ColorThemeItem(0),
+        )
+
+        val adapter = ColorThemeAdapter(list)
+        binding.rvWorkspaceColorTheme.layoutManager = GridLayoutManager(context, 5)
+        binding.rvWorkspaceColorTheme.setHasFixedSize(true)
+        binding.rvWorkspaceColorTheme.adapter = adapter
+    }
 }
