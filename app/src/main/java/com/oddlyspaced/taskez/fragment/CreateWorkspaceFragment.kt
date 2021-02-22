@@ -33,15 +33,20 @@ class CreateWorkspaceFragment: Fragment() {
         val list = arrayListOf(
             ColorThemeItem(R.drawable.gradient_2),
             ColorThemeItem(R.drawable.gradient_3),
-//            ColorThemeItem(R.drawable.gradient_4),
             ColorThemeItem(R.drawable.gradient_7),
             ColorThemeItem(R.drawable.gradient_8),
             ColorThemeItem(R.drawable.gradient_9),
-        )
+            ColorThemeItem(R.color.colorful_1),
+            ColorThemeItem(R.color.colorful_2),
+            ColorThemeItem(R.color.colorful_3),
+            ColorThemeItem(R.color.colorful_4),
+            ColorThemeItem(R.color.colorful_5),
+            )
 
         val adapter = ColorThemeAdapter(list)
         binding.rvWorkspaceColorTheme.layoutManager = GridLayoutManager(context, 5)
         binding.rvWorkspaceColorTheme.setHasFixedSize(true)
         binding.rvWorkspaceColorTheme.adapter = adapter
+        binding.rvWorkspaceColorTheme.isNestedScrollingEnabled = false
     }
 }
