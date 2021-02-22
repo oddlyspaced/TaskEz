@@ -31,8 +31,7 @@ class TaskEzPrimaryButton: CardView {
     private fun init(context: Context) {
         LayoutInflater.from(context).inflate(R.layout.button_primary, this, true)
         binding = ButtonPrimaryBinding.bind(this)
-        // TODO : Check why double setting is necessary
-        binding.cvPrimaryButton.setCardBackgroundColor(context.getColor(R.color.primary))
+        binding.consPrimaryButton.setBackgroundColor(context.getColor(R.color.primary))
         binding.cvPrimaryButton.elevation = DimensionUtils.floatToDp(context, 8F)
         binding.cvPrimaryButton.radius = DimensionUtils.floatToDp(context, 24F)
     }
@@ -43,6 +42,11 @@ class TaskEzPrimaryButton: CardView {
             binding.imgPrimaryButtonDrawable.isVisible = typedArray.getBoolean(R.styleable.TaskEzPrimaryButton_iconVisible, false)
             binding.txPrimaryButtonText.text = typedArray.getString(R.styleable.TaskEzPrimaryButton_text)
             binding.imgPrimaryButtonDrawable.setImageResource(typedArray.getResourceId(R.styleable.TaskEzPrimaryButton_iconSrc, R.drawable.ic_mail))
+            if (typedArray.getBoolean(R.styleable.TaskEzPrimaryButton_deactivated, false)) {
+                binding.consPrimaryButton.setBackgroundColor(context.getColor(R.color.background_2))
+                binding.txPrimaryButtonText.setTextColor(context.getColor(R.color.state_deactivated))
+                binding.cvPrimaryButton.elevation = DimensionUtils.floatToDp(context, 0F)
+            }
         }
         catch (e: Exception) {
             e.printStackTrace()
