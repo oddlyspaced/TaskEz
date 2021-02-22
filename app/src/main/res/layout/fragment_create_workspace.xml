@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.oddlyspaced.taskez.base.TaskEzLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.oddlyspaced.taskez.base.TaskEzLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
 
     <include
         android:id="@+id/include2"
@@ -12,9 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <TextView
         android:id="@+id/textView20"
@@ -42,14 +47,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
-        app:cardCornerRadius="24dp"
-        app:strokeWidth="2dp"
-        app:strokeColor="#1EFFFFFF"
         app:cardBackgroundColor="@color/background_1"
+        app:cardCornerRadius="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" >
+        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:strokeColor="#1EFFFFFF"
+        app:strokeWidth="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
