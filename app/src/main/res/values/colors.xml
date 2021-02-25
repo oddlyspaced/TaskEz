@@ -14,6 +14,7 @@
     <color name="colorful_6">#FFDD72</color>
     <color name="colorful_7">#FF968E</color>
 
+    <color name="state_activated">#200745</color>
     <color name="state_deactivated">#5E6272</color>
     <color name="stroke_button">#494C54</color>
 </resources>
