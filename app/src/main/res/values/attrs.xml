@@ -6,4 +6,8 @@
         <attr name="text" format="string"/>
         <attr name="deactivated" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="TaskEzProgressBar">
+        <attr name="progress" format="float"/>
+    </declare-styleable>
+
 </resources>
