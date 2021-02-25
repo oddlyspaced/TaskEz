@@ -2,7 +2,6 @@ package com.oddlyspaced.taskez.base
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.LayoutInflater
 import androidx.cardview.widget.CardView
 import androidx.core.view.isVisible
@@ -29,11 +28,10 @@ class TaskEzPrimaryButton: CardView {
     }
 
     private fun init(context: Context) {
-        LayoutInflater.from(context).inflate(R.layout.button_primary, this, true)
-        binding = ButtonPrimaryBinding.bind(this)
-        binding.consPrimaryButton.setBackgroundColor(context.getColor(R.color.primary))
-        binding.cvPrimaryButton.elevation = DimensionUtils.floatToDp(context, 8F)
-        binding.cvPrimaryButton.radius = DimensionUtils.floatToDp(context, 24F)
+        binding = ButtonPrimaryBinding.inflate(LayoutInflater.from(context), this, true)
+        this.setCardBackgroundColor(context.getColor(R.color.primary))
+        this.elevation = DimensionUtils.floatToDp(context, 8F)
+        this.radius = DimensionUtils.floatToDp(context, 24F)
     }
 
     private fun setAttr(attributes: AttributeSet) {
@@ -43,9 +41,9 @@ class TaskEzPrimaryButton: CardView {
             binding.txPrimaryButtonText.text = typedArray.getString(R.styleable.TaskEzPrimaryButton_text)
             binding.imgPrimaryButtonDrawable.setImageResource(typedArray.getResourceId(R.styleable.TaskEzPrimaryButton_iconSrc, R.drawable.ic_mail))
             if (typedArray.getBoolean(R.styleable.TaskEzPrimaryButton_deactivated, false)) {
-                binding.consPrimaryButton.setBackgroundColor(context.getColor(R.color.background_2))
+                this.setCardBackgroundColor(context.getColor(R.color.background_2))
                 binding.txPrimaryButtonText.setTextColor(context.getColor(R.color.state_deactivated))
-                binding.cvPrimaryButton.elevation = DimensionUtils.floatToDp(context, 0F)
+                this.elevation = DimensionUtils.floatToDp(context, 0F)
             }
         }
         catch (e: Exception) {
