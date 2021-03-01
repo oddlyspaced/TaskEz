@@ -6,6 +6,7 @@
         <attr name="text" format="string"/>
         <attr name="deactivated" format="boolean"/>
         <attr name="minimised" format="boolean"/>
+        <attr name="buttonBackgroundColor" format="reference"/>
     </declare-styleable>
     <declare-styleable name="TaskEzProgressBar">
         <attr name="progress" format="float"/>
