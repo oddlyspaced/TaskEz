@@ -5,6 +5,7 @@
         <attr name="iconSrc" format="reference"/>
         <attr name="text" format="string"/>
         <attr name="deactivated" format="boolean"/>
+        <attr name="minimised" format="boolean"/>
     </declare-styleable>
     <declare-styleable name="TaskEzProgressBar">
         <attr name="progress" format="float"/>
