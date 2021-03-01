@@ -3,8 +3,11 @@ package com.oddlyspaced.taskez.base
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
+import androidx.core.view.marginTop
 import com.oddlyspaced.taskez.R
 import com.oddlyspaced.taskez.databinding.ButtonPrimaryBinding
 import com.oddlyspaced.taskez.utils.DimensionUtils
@@ -44,6 +47,13 @@ class TaskEzPrimaryButton: CardView {
                 this.setCardBackgroundColor(context.getColor(R.color.background_2))
                 binding.txPrimaryButtonText.setTextColor(context.getColor(R.color.state_deactivated))
                 this.elevation = DimensionUtils.floatToDp(context, 0F)
+            }
+            if (typedArray.getBoolean(R.styleable.TaskEzPrimaryButton_minimised, false)) {
+                binding.consPrimaryInternal.setPadding(
+                    DimensionUtils.floatToDp(context, 16F).toInt(),
+                    DimensionUtils.floatToDp(context, 8F).toInt(),
+                    DimensionUtils.floatToDp(context, 16F).toInt(),
+                    DimensionUtils.floatToDp(context, 8F).toInt())
             }
         }
         catch (e: Exception) {
