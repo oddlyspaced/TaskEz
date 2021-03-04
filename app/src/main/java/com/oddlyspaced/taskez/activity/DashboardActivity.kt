@@ -17,7 +17,9 @@ class DashboardActivity : TaskEzActivity() {
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.cardStackDashboard.layoutManager = CardStackLayoutManager(applicationContext)
+        binding.cardStackDashboard.layoutManager = CardStackLayoutManager(applicationContext).apply {
+            setVisibleCount(3)
+        }
         binding.cardStackDashboard.adapter = TaskStackAdapter()
 
     }
