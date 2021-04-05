@@ -2,7 +2,7 @@
 
 # TaskEz (User Interface Replication)
 
-This repository holds Kotlin Code and Layout XML's I created in order to replicate the [Taskez Ui Kit](https://ui8.net/ui8/products/taskez-productivity-app-ios-ui-kit)  Ui Kit, 1 to 1 in Native Android. 
+This repository holds Kotlin Code and Layout XML's I created in order to replicate the [Taskez Ui Kit](https://ui8.net/ui8/products/taskez-productivity-app-ios-ui-kit), 1 to 1 in Native Android. 
 Any layout classes created or refrences are primarily written by me and were created for the sole purpose of practicing Complex User Interface development in Native Android.
 
 ## Screenshots
