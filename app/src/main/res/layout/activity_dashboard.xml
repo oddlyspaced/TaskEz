@@ -86,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.3" />
+            app:layout_constraintGuide_percent="0.35" />
 
         <com.yuyakaido.android.cardstackview.CardStackView
             android:id="@+id/cardStackDashboard"
@@ -112,14 +112,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:divider="@drawable/divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
 
-                <TextView
-                    android:id="@+id/textView33"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textColor="#FFF" />
+                <com.oddlyspaced.taskez.base.TaskEzTaskItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.oddlyspaced.taskez.base.TaskEzTaskItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.oddlyspaced.taskez.base.TaskEzTaskItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </ScrollView>
 
