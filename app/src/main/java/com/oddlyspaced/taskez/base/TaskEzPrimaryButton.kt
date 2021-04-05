@@ -30,7 +30,7 @@ class TaskEzPrimaryButton: CardView {
 
     private fun init(context: Context) {
         binding = ButtonPrimaryBinding.inflate(LayoutInflater.from(context), this, true)
-        this.setCardBackgroundColor(context.getColor(R.color.primary))
+        binding.consPrimaryButton.setBackgroundColor(context.getColor(R.color.primary))
         this.elevation = DimensionUtils.floatToDp(context, 8F)
         this.radius = DimensionUtils.floatToDp(context, 24F)
     }
@@ -42,7 +42,8 @@ class TaskEzPrimaryButton: CardView {
             binding.txPrimaryButtonText.text = typedArray.getString(R.styleable.TaskEzPrimaryButton_text)
             binding.imgPrimaryButtonDrawable.setImageResource(typedArray.getResourceId(R.styleable.TaskEzPrimaryButton_iconSrc, R.drawable.ic_mail))
             if (typedArray.getBoolean(R.styleable.TaskEzPrimaryButton_deactivated, false)) {
-                this.setCardBackgroundColor(context.getColor(R.color.background_2))
+                binding.consPrimaryButton.setBackgroundColor(context.getColor(R.color.background_2))
+//                this.setCardBackgroundColor(context.getColor(R.color.background_2))
                 binding.txPrimaryButtonText.setTextColor(context.getColor(R.color.state_deactivated))
                 this.elevation = DimensionUtils.floatToDp(context, 0F)
             }
